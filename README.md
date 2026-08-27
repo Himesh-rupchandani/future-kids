@@ -2,7 +2,7 @@
 
 > **Inspiring Young Minds Through STEM Education**
 
-A modern, vibrant, kid-friendly STEM education website inspired by Stemlabs.in — rebuilt with better design, smoother animations, and a more attractive UI.
+A modern, vibrant, kid-friendly STEM education website — built with beautiful design, smooth animations, and an attractive UI to spark curiosity and creativity in young innovators.
 
 ---
 
@@ -10,30 +10,33 @@ A modern, vibrant, kid-friendly STEM education website inspired by Stemlabs.in �
 
 - 🎨 **Modern, colorful design** with kid-friendly typography (Fredoka One + Nunito)
 - 🌈 **Vibrant gradients & animations** powered by Tailwind CSS
-- 🧸 **Playful floating shapes & animations** that appeal to children
+- ✨ **Floating sparkles & color blobs** creating a playful atmosphere
 - 📱 **Fully responsive** — works on mobile, tablet, and desktop
 - 🎯 **Complete sections**:
-  - Hero section with animated stats
+  - Hero section with animated stats & floating badges
   - DICE Philosophy (Design, Innovation, Creativity, Entrepreneurship)
   - Mission & Vision
-  - 6 Age-based STEM Programs (including new AI & Robotics Pro)
-  - Achievements & Statistics counter
+  - How It Works (4-step process)
+  - 5 Age-based STEM Programs
+  - Achievements & animated counters
   - Partner schools / Success Stories
   - Parent & School Testimonials
-  - Projects Gallery
-  - Mobile App download section
-  - Contact form with booking system
-  - Comprehensive footer
+  - Popular Models gallery (Scarecrow, Park, Vehicles)
+  - Mobile App download with phone mockups
+  - Contact form / Book Free Demo CTA
+  - Comprehensive footer with social links
+  - Floating social media sidebar
 
 - ⚡ **Interactive elements**:
   - Smooth scroll navigation
-  - Animated number counters
-  - Scroll-triggered reveal animations
-  - Parallax mouse effect on hero
-  - Working mobile menu
-  - Contact form with success animation
+  - Animated number counters on scroll
+  - Scroll-triggered reveal animations with stagger
+  - 3D tilt effect on cards
+  - Button ripple click effects
+  - Working mobile hamburger menu
   - Scroll-to-top button
   - Hover effects on all cards/buttons
+  - Animated sparkles and floating background blobs
 
 ---
 
@@ -42,7 +45,7 @@ A modern, vibrant, kid-friendly STEM education website inspired by Stemlabs.in �
 - **HTML5** semantic markup
 - **Tailwind CSS v3** (CDN) for styling
 - **Font Awesome 6.4** for icons
-- **Google Fonts** (Fredoka One + Nunito)
+- **Google Fonts** (Fredoka One + Baloo 2 + Nunito)
 - **Vanilla JavaScript** for interactivity
 - No build tools needed — just open `index.html`!
 
@@ -73,7 +76,9 @@ future-kids/
 ├── index.html       # Main HTML file
 ├── styles.css       # Custom CSS styles & animations
 ├── script.js        # JavaScript interactivity
-└── README.md        # This file
+├── images/          # Images (models, photos, app screens)
+├── README.md        # This file
+└── .gitignore
 ```
 
 ---
@@ -82,24 +87,29 @@ future-kids/
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Indigo (Primary) | `#4F46E5` | Main brand color, CTA buttons |
-| Purple | `#8B5CF6` | Accent, gradients |
+| Cyan (Primary) | `#06B6D4` | Main brand color, buttons, highlights |
+| Purple | `#A855F7` | Accent, gradients |
 | Pink | `#EC4899` | Accent, gradients |
-| Amber (Secondary) | `#F59E0B` | Highlights |
-| Emerald (Accent) | `#10B981` | Success, green accents |
-| Sky | `#0EA5E9` | Blue accents |
-| Dark | `#1E293B` | Text |
+| Orange | `#F97316` | Secondary color, CTAs |
+| Yellow | `#FACC15` | Highlights, stars |
+| Green | `#22C55E` | Success, checkmarks |
+| Dark | `#0F172A` | Text & footer |
 
 ---
 
 ## 📝 Programs Offered
 
-1. **Inspire Explorers** — Ages 3+ (Nursery/KG)
-2. **Inspire Builders** — Ages 4+ (Std 1-4)
-3. **Inspire Freshmen** — Ages 8+ (Std 5-8)
-4. **Block Programming** — Ages 8+ (Std 5-9)
-5. **AI & Robotics Pro** — Ages 10+ (Advanced) ⭐ *New*
-6. **Inspire Scientipreneur** — Ages 13+ (Std 9-12)
+1. **Inspire Explorers** — Ages 3+ (Nursery, KG1, KG2)
+2. **Inspire Builders** — Ages 4+ (Std 1 to Std 4)
+3. **Inspire Freshmen** — Ages 8+ (Std 5 to Std 8)
+4. **Inspire Scientipreneur** — Ages 13+ (Std 9 to Std 12)
+5. **Block Programming** — Ages 8+ (Std 5 to Std 9)
+
+---
+
+## 🌐 Live Website
+
+Visit: **https://himesh-rupchandani.github.io/future-kids/** (if GitHub Pages is enabled)
 
 ---
 
