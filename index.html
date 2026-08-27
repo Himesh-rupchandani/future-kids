@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Kids - Inspiring Young Minds Through STEM Education</title>
+    <title>Future Kids - STEM Education for Kids, STEM Learning in India</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4F46E5',
-                        secondary: '#F59E0B',
-                        accent: '#10B981',
-                        purple: '#8B5CF6',
+                        primary: '#06B6D4',
+                        secondary: '#F97316',
+                        accent: '#22C55E',
+                        purple: '#A855F7',
                         pink: '#EC4899',
-                        sky: '#0EA5E9',
+                        yellow: '#FACC15',
                         dark: '#1E293B',
                     },
                     fontFamily: {
                         fredoka: ['"Fredoka One"', 'cursive'],
+                        baloo: ['"Baloo 2"', 'cursive'],
                         nunito: ['Nunito', 'sans-serif'],
                     }
                 }
@@ -30,771 +31,516 @@
         }
     </script>
 </head>
-<body class="font-nunito bg-gray-50 overflow-x-hidden">
+<body class="font-nunito bg-white overflow-x-hidden">
 
-    <!-- Floating Decorative Elements -->
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
+    <!-- Top Bar (like stemlabs) -->
+    <div class="bg-gray-50 border-b border-gray-200 text-sm hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="flex items-center gap-4 text-gray-600">
+                <a href="tel:+919876543210" class="hover:text-primary transition"><i class="fas fa-phone-alt mr-1"></i> +91 98765 43210</a>
+                <a href="mailto:hello@futurekids.edu" class="hover:text-primary transition"><i class="fas fa-envelope mr-1"></i> hello@futurekids.edu</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-gray-600 hover:text-primary font-semibold"><i class="fas fa-user mr-1"></i> My Profile</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="text-gray-600 hover:text-primary font-semibold">Login / SignUp</a>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-lg shadow-lg nav-fade" id="navbar">
+    <nav class="w-full sticky top-0 z-50 bg-white shadow-md" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-3">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <div class="logo-icon w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl font-bold animate-pulse-slow">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl logo-icon-bg">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <span class="font-fredoka text-2xl bg-gradient-to-r from-primary via-purple to-pink bg-clip-text text-transparent">Future Kids</span>
-                </div>
+                    <span class="font-fredoka text-2xl md:text-3xl bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent">Future Kids</span>
+                </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-7">
                     <a href="#home" class="nav-link text-dark font-bold hover:text-primary transition">Home</a>
-                    <a href="#about" class="nav-link text-dark font-bold hover:text-primary transition">About</a>
+                    <a href="#how-it-works" class="nav-link text-dark font-bold hover:text-primary transition">How It Works</a>
+                    <a href="#mission" class="nav-link text-dark font-bold hover:text-primary transition">Mission</a>
                     <a href="#programs" class="nav-link text-dark font-bold hover:text-primary transition">Programs</a>
                     <a href="#stories" class="nav-link text-dark font-bold hover:text-primary transition">Success Stories</a>
                     <a href="#testimonials" class="nav-link text-dark font-bold hover:text-primary transition">Reviews</a>
+                    <a href="#models" class="nav-link text-dark font-bold hover:text-primary transition">Models</a>
                     <a href="#contact" class="nav-link text-dark font-bold hover:text-primary transition">Contact</a>
-                    <button class="btn-gradient text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                        <i class="fas fa-calendar-check mr-2"></i>Book Free Class
-                    </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-2xl text-dark" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <button class="hidden md:block btn-orange text-white px-5 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition text-sm">
+                        Book A Free Class
+                    </button>
+                    <button class="lg:hidden text-2xl text-dark" id="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
-            <!-- Mobile Menu -->
-            <div class="md:hidden hidden pb-4" id="mobile-menu">
+            <div class="lg:hidden hidden pb-4" id="mobile-menu">
                 <a href="#home" class="block py-2 text-dark font-bold">Home</a>
-                <a href="#about" class="block py-2 text-dark font-bold">About</a>
+                <a href="#how-it-works" class="block py-2 text-dark font-bold">How It Works</a>
+                <a href="#mission" class="block py-2 text-dark font-bold">Mission</a>
                 <a href="#programs" class="block py-2 text-dark font-bold">Programs</a>
                 <a href="#stories" class="block py-2 text-dark font-bold">Success Stories</a>
                 <a href="#testimonials" class="block py-2 text-dark font-bold">Reviews</a>
+                <a href="#models" class="block py-2 text-dark font-bold">Models</a>
                 <a href="#contact" class="block py-2 text-dark font-bold">Contact</a>
-                <button class="btn-gradient text-white px-6 py-2 rounded-full font-bold mt-3 w-full">Book Free Class</button>
+                <button class="btn-orange text-white px-6 py-2 rounded-full font-bold mt-3 w-full">Book A Free Class</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden hero-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8 text-center lg:text-left">
-                    <div class="inline-block bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-bold text-sm animate-bounce-slow">
-                        🎉 Award-Winning STEM Education for Kids
+    <!-- Hero Section - Matching stemlabs "Welcome to Future Kids" -->
+    <section id="home" class="relative overflow-hidden hero-gradient pt-12 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-md mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="font-bold text-gray-700 text-sm">Welcome to Future Kids</span>
                     </div>
-                    <h1 class="font-fredoka text-5xl md:text-7xl leading-tight">
-                        <span class="bg-gradient-to-r from-primary via-purple to-pink bg-clip-text text-transparent">Developing</span><br>
-                        <span class="text-dark">Your Child's Mind for a</span><br>
-                        <span class="bg-gradient-to-r from-secondary via-accent to-sky bg-clip-text text-transparent">Better Tomorrow!</span>
+                    <h1 class="font-fredoka text-4xl md:text-6xl lg:text-7xl leading-tight mb-4">
+                        <span class="text-dark">Developing your</span><br>
+                        <span class="bg-gradient-to-r from-primary via-purple to-pink bg-clip-text text-transparent">child's mind</span><br>
+                        <span class="text-dark">for a</span>
+                        <span class="text-secondary"> better tomorrow</span>
                     </h1>
-                    <p class="text-gray-600 text-lg md:text-xl max-w-xl leading-relaxed mx-auto lg:mx-0">
-                        Spark creativity, innovation, and entrepreneurial thinking in your child through hands-on STEM learning. Build, Play, and Learn with our future-ready programs!
+                    <p class="text-gray-600 text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Spark creativity, innovation, and entrepreneurial thinking through hands-on STEM learning. Build, Play, and Learn with our future-ready educational kits!
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <button class="btn-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                            <i class="fas fa-gift"></i> Book a Free STEM Class
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <button class="btn-cyan text-white px-7 py-3.5 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-calendar-check"></i> Book A Free STEM Class
                         </button>
-                        <button class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                            <i class="fas fa-play-circle"></i> Book a Free Coding Class
+                        <button class="btn-purple text-white px-7 py-3.5 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-laptop-code"></i> Book A Free Coding Class
                         </button>
                     </div>
 
-                    <!-- Quick Stats -->
-                    <div class="grid grid-cols-3 gap-4 pt-6">
-                        <div class="text-center">
-                            <div class="font-fredoka text-3xl md:text-4xl text-primary counter" data-target="5000">0</div>
-                            <div class="text-gray-500 font-semibold text-sm">Happy Kids</div>
+                    <!-- BUILD PLAY LEARN Cards like stemlabs -->
+                    <div class="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+                        <div class="bpl-card bg-gradient-to-br from-red-400 to-red-600 rounded-2xl p-4 text-white text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition">
+                            <div class="text-3xl mb-1"><i class="fas fa-hammer"></i></div>
+                            <div class="font-fredoka text-lg md:text-xl">BUILD</div>
                         </div>
-                        <div class="text-center">
-                            <div class="font-fredoka text-3xl md:text-4xl text-secondary counter" data-target="50">0</div>
-                            <div class="text-gray-500 font-semibold text-sm">Partner Schools</div>
+                        <div class="bpl-card bg-gradient-to-br from-green-400 to-green-600 rounded-2xl p-4 text-white text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition">
+                            <div class="text-3xl mb-1"><i class="fas fa-gamepad"></i></div>
+                            <div class="font-fredoka text-lg md:text-xl">PLAY</div>
                         </div>
-                        <div class="text-center">
-                            <div class="font-fredoka text-3xl md:text-4xl text-accent counter" data-target="100">0</div>
-                            <div class="text-gray-500 font-semibold text-sm">Projects Built</div>
+                        <div class="bpl-card bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl p-4 text-white text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition">
+                            <div class="text-3xl mb-1"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="font-fredoka text-lg md:text-xl">LEARN</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Illustration -->
-                <div class="relative flex justify-center">
-                    <div class="relative w-full max-w-lg">
-                        <div class="absolute -top-10 -left-10 w-32 h-32 bg-yellow-300 rounded-full opacity-30 blur-2xl"></div>
-                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-300 rounded-full opacity-30 blur-2xl"></div>
-                        
-                        <div class="grid grid-cols-2 gap-4 relative">
-                            <div class="card-bounce space-y-4">
-                                <div class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl p-6 shadow-2xl text-white transform hover:scale-105 transition">
-                                    <div class="text-5xl mb-3"><i class="fas fa-cubes"></i></div>
-                                    <h3 class="font-fredoka text-xl mb-1">BUILD</h3>
-                                    <p class="text-sm text-blue-100">Construct amazing models</p>
-                                </div>
-                                <div class="bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl p-6 shadow-2xl text-white transform hover:scale-105 transition">
-                                    <div class="text-5xl mb-3"><i class="fas fa-gamepad"></i></div>
-                                    <h3 class="font-fredoka text-xl mb-1">PLAY</h3>
-                                    <p class="text-sm text-green-100">Learn through fun activities</p>
-                                </div>
-                            </div>
-                            <div class="card-bounce-delay space-y-4 mt-8">
-                                <div class="bg-gradient-to-br from-purple-400 to-pink-600 rounded-3xl p-6 shadow-2xl text-white transform hover:scale-105 transition">
-                                    <div class="text-5xl mb-3"><i class="fas fa-lightbulb"></i></div>
-                                    <h3 class="font-fredoka text-xl mb-1">LEARN</h3>
-                                    <p class="text-sm text-purple-100">Discover STEM concepts</p>
-                                </div>
-                                <div class="bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl p-6 shadow-2xl text-white transform hover:scale-105 transition">
-                                    <div class="text-5xl mb-3"><i class="fas fa-rocket"></i></div>
-                                    <h3 class="font-fredoka text-xl mb-1">CREATE</h3>
-                                    <p class="text-sm text-orange-100">Innovate & Invent</p>
-                                </div>
+                <div class="order-1 lg:order-2 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <img src="images/kids-stem.jpg" alt="Kids learning STEM" class="rounded-3xl shadow-2xl w-full object-cover" loading="lazy">
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-dark rounded-2xl p-4 shadow-xl rotate-6">
+                            <div class="font-fredoka text-2xl">DICE</div>
+                            <div class="text-xs font-bold">STEM Philosophy</div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-xl flex items-center gap-2 -rotate-3">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"><i class="fas fa-check"></i></div>
+                            <div>
+                                <div class="font-bold text-sm">5000+ Happy Kids</div>
+                                <div class="text-xs text-gray-500">Across India</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Wave SVG -->
-        <div class="absolute bottom-0 left-0 w-full">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 120L48 110C96 100 192 80 288 70C384 60 480 60 576 65C672 70 768 80 864 85C960 90 1056 90 1152 85C1248 80 1344 70 1392 65L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" fill="white"/>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 40L60 35C120 30 240 20 360 25C480 30 600 50 720 55C840 60 960 50 1080 42C1200 35 1320 30 1380 27L1440 25V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="white"/>
             </svg>
         </div>
     </section>
 
-    <!-- DICE Philosophy Section -->
-    <section class="py-20 bg-white relative overflow-hidden" id="about">
+    <!-- DICE Letters Section (like stemlabs D-I-C-E vertical) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="dice-letter group relative bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl p-6 text-center text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition">
+                    <div class="font-fredoka text-7xl mb-2">D</div>
+                    <div class="font-baloo font-bold text-xl">DESIGN</div>
+                    <p class="text-cyan-100 text-sm mt-2">Thinking</p>
+                </div>
+                <div class="dice-letter group relative bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl p-6 text-center text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition">
+                    <div class="font-fredoka text-7xl mb-2">I</div>
+                    <div class="font-baloo font-bold text-xl">INNOVATION</div>
+                    <p class="text-purple-100 text-sm mt-2">& Ideas</p>
+                </div>
+                <div class="dice-letter group relative bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl p-6 text-center text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition">
+                    <div class="font-fredoka text-7xl mb-2">C</div>
+                    <div class="font-baloo font-bold text-xl">CREATIVITY</div>
+                    <p class="text-orange-100 text-sm mt-2">& Imagination</p>
+                </div>
+                <div class="dice-letter group relative bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl p-6 text-center text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition">
+                    <div class="font-fredoka text-7xl mb-2">E</div>
+                    <div class="font-baloo font-bold text-xl">ENTREPRENEURSHIP</div>
+                    <p class="text-green-100 text-sm mt-2">& Leadership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section (from stemlabs) -->
+    <section id="stories" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Our Philosophy</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl mb-4">
-                    <span class="bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent">The DICE Framework</span>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    We nurture young minds through our unique DICE approach — Design, Innovation, Creativity, and Entrepreneurship.
-                </p>
+            <div class="text-center mb-12">
+                <h2 class="font-fredoka text-3xl md:text-5xl text-dark mb-4">Success Stories</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-400 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-400 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-green-400 rounded-full inline-block"></span>
+                </div>
+                <p class="text-gray-500">Our trusted partners and schools across India and globally</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center text-white text-4xl mx-auto mb-6 shadow-lg group-hover:rotate-12 transition-transform">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl text-blue-600 mb-2">D</div>
-                    <h3 class="font-fredoka text-2xl text-dark mb-3">Design Thinking</h3>
-                    <p class="text-gray-600">Empowering kids to think critically and solve real-world problems through structured design processes.</p>
-                    <div class="absolute top-4 right-4 text-6xl font-fredoka text-blue-100 group-hover:text-blue-200 transition">D</div>
-                </div>
-
-                <div class="group relative bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 text-center hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300">
-                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-700 rounded-2xl flex items-center justify-center text-white text-4xl mx-auto mb-6 shadow-lg group-hover:rotate-12 transition-transform">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl text-green-600 mb-2">I</div>
-                    <h3 class="font-fredoka text-2xl text-dark mb-3">Innovation</h3>
-                    <p class="text-gray-600">Encouraging out-of-the-box thinking to turn creative ideas into tangible solutions and inventions.</p>
-                    <div class="absolute top-4 right-4 text-6xl font-fredoka text-green-100 group-hover:text-green-200 transition">I</div>
-                </div>
-
-                <div class="group relative bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl p-8 text-center hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300">
-                    <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-700 rounded-2xl flex items-center justify-center text-white text-4xl mx-auto mb-6 shadow-lg group-hover:rotate-12 transition-transform">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl text-pink-600 mb-2">C</div>
-                    <h3 class="font-fredoka text-2xl text-dark mb-3">Creativity</h3>
-                    <p class="text-gray-600">Unleashing imagination through hands-on projects that blend art, science, and technology beautifully.</p>
-                    <div class="absolute top-4 right-4 text-6xl font-fredoka text-pink-100 group-hover:text-pink-200 transition">C</div>
-                </div>
-
-                <div class="group relative bg-gradient-to-br from-yellow-50 to-orange-100 rounded-3xl p-8 text-center hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300">
-                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-4xl mx-auto mb-6 shadow-lg group-hover:rotate-12 transition-transform">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl text-orange-600 mb-2">E</div>
-                    <h3 class="font-fredoka text-2xl text-dark mb-3">Entrepreneurship</h3>
-                    <p class="text-gray-600">Building leadership skills and a business mindset to prepare kids for the jobs of tomorrow.</p>
-                    <div class="absolute top-4 right-4 text-6xl font-fredoka text-orange-100 group-hover:text-orange-200 transition">E</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission & Vision -->
-    <section class="py-20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="relative">
-                        <div class="bg-white rounded-3xl shadow-2xl p-8 mb-6 transform hover:-rotate-2 transition">
-                            <div class="flex items-start gap-4">
-                                <div class="w-14 h-14 bg-gradient-to-br from-primary to-purple rounded-2xl flex items-center justify-center text-white text-2xl flex-shrink-0">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-fredoka text-2xl text-dark mb-2">Our Mission</h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        To spark DICE (Design Thinking, Innovation, Creativity, and Entrepreneurship) and foster a deep interest in STEM (Science, Technology, Engineering, and Math) in children and young adults through hands-on practical learning by "Making".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-3xl shadow-2xl p-8 transform hover:rotate-2 transition">
-                            <div class="flex items-start gap-4">
-                                <div class="w-14 h-14 bg-gradient-to-br from-secondary to-red-500 rounded-2xl flex items-center justify-center text-white text-2xl flex-shrink-0">
-                                    <i class="fas fa-eye"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-fredoka text-2xl text-dark mb-2">Our Vision</h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        To develop hands-on interactive learning programs and educational kits that revolutionize education by encouraging children to build, construct, and get creative — not solely learning through books.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 text-center lg:text-left">
-                    <span class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Why Choose Us</span>
-                    <h2 class="font-fredoka text-4xl md:text-5xl mb-6">
-                        <span class="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent">Building Future</span><br>
-                        <span class="text-dark">Leaders & Innovators</span>
-                    </h2>
-                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                        At Future Kids, we believe every child has the potential to change the world. Our STEM programs combine education with entertainment to create unforgettable learning experiences.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">Hands-on Learning</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">Expert Mentors</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">Age-Appropriate</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">Fun & Engaging</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">STEM Certified</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600"><i class="fas fa-check"></i></div>
-                            <span class="font-semibold text-gray-700">Future-Ready Skills</span>
-                        </div>
-                    </div>
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <button class="btn-gradient text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
-                            <i class="fas fa-download mr-2"></i>Download Brochure
-                        </button>
-                        <button class="bg-white text-red-500 border-2 border-red-500 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition flex items-center gap-2">
-                            <i class="fab fa-youtube text-xl"></i> Watch Video
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Our Programs</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl mb-4">
-                    <span class="bg-gradient-to-r from-accent to-sky bg-clip-text text-transparent">Programs for Every Age</span>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Our curriculum is developmentally designed to match your child's social, emotional, and intellectual needs across age groups.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Program 1 -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-baby"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 3+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">Inspire Explorers</h3>
-                            <p class="text-sm text-blue-100">Nursery, KG1 & KG2</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-cubes mr-1"></i>Build</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-gamepad mr-1"></i>Play</span>
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-book mr-1"></i>Learn</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            A preprimary program for little hands using "Build, Play and Learn" strategy. Introduction to Math & Literacy via kinesthetic learning using Lego-like blocks designed for smaller hands.
-                        </p>
-                        <button class="w-full bg-blue-50 text-blue-600 font-bold py-3 rounded-xl hover:bg-blue-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Program 2 -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-green-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-600 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-child"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 4+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">Inspire Builders</h3>
-                            <p class="text-sm text-green-100">Std 1 to Std 4</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-robot mr-1"></i>Robotics Intro</span>
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-tools mr-1"></i>Builder Kit</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Easy-to-use STEM builder kits introducing young students to robotics. Build unlimited themed models and develop early interest in theoretical science and mathematics through construction.
-                        </p>
-                        <button class="w-full bg-green-50 text-green-600 font-bold py-3 rounded-xl hover:bg-green-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Program 3 -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-orange-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-cog"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 8+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">Inspire Freshmen</h3>
-                            <p class="text-sm text-orange-100">Std 5 to Std 8</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-microchip mr-1"></i>Motorized</span>
-                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-cogs mr-1"></i>Machines</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Expand horizons in Robotics by building motorized machines! Instructor-led STEM curriculum providing multi-sensory experiences exploring mechanical, mathematical, physical, and logical aspects of machinery.
-                        </p>
-                        <button class="w-full bg-orange-50 text-orange-600 font-bold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Program 4 -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-purple-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-user-graduate"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 13+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">Inspire Scientipreneur</h3>
-                            <p class="text-sm text-purple-100">Std 9 to Std 12</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-flask mr-1"></i>R&D</span>
-                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-lightbulb mr-1"></i>Entrepreneur</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Developing R&D and entrepreneurial mindset using Inspire Freshman Kit and Lego Digital Designer. Year-round 10-session program guiding kids to ideate, apply strategies, and create real STEM projects.
-                        </p>
-                        <button class="w-full bg-purple-50 text-purple-600 font-bold py-3 rounded-xl hover:bg-purple-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Program 5 -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-yellow-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-code"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 8+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">Block Programming</h3>
-                            <p class="text-sm text-yellow-100">Std 5 to Std 9</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fab fa-ibm mr-1"></i>IBM Blockly</span>
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-laptop-code mr-1"></i>Code.org</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Code your story with IBM's Blockly platform and Code.org! One-on-one sessions to enhance core coding concepts in STEM through simple, fun, theme-based learning that builds logical thinking.
-                        </p>
-                        <button class="w-full bg-yellow-50 text-yellow-600 font-bold py-3 rounded-xl hover:bg-yellow-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Program 6 - New Program (added for better website) -->
-                <div class="program-card group bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-sky-300 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-sky-400 to-indigo-600 relative overflow-hidden flex items-center justify-center">
-                        <div class="text-8xl opacity-30"><i class="fas fa-brain"></i></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">Ages 10+</div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="font-fredoka text-2xl">AI & Robotics Pro</h3>
-                            <p class="text-sm text-sky-100">Advanced Program</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-robot mr-1"></i>AI/ML</span>
-                            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fas fa-robot mr-1"></i>Arduino</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Dive into the future with Artificial Intelligence, Machine Learning, and advanced robotics using Arduino & Raspberry Pi. Build smart robots, AI-powered projects, and compete in national championships!
-                        </p>
-                        <button class="w-full bg-sky-50 text-sky-600 font-bold py-3 rounded-xl hover:bg-sky-500 hover:text-white transition group">
-                            <i class="fas fa-arrow-right mr-2 group-hover:translate-x-1 transition-transform"></i>Learn More
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats/Achievements Section -->
-    <section class="py-20 relative overflow-hidden stats-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full font-bold text-sm mb-4">Our Impact</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl text-white mb-4">Our Achievements</h2>
-            </div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center text-white group">
-                    <div class="w-24 h-24 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-user-graduate text-4xl"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl md:text-6xl mb-2 counter" data-target="133">0</div>
-                    <p class="text-white/80 font-semibold">Inspire Builders<br>Graduates (Ages 4+)</p>
-                </div>
-                <div class="text-center text-white group">
-                    <div class="w-24 h-24 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-cogs text-4xl"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl md:text-6xl mb-2 counter" data-target="67">0</div>
-                    <p class="text-white/80 font-semibold">Inspire Freshmen<br>Graduates (Ages 8+)</p>
-                </div>
-                <div class="text-center text-white group">
-                    <div class="w-24 h-24 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-school text-4xl"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl md:text-6xl mb-2 counter" data-target="3">0</div>
-                    <p class="text-white/80 font-semibold">Partner<br>Schools</p>
-                </div>
-                <div class="text-center text-white group">
-                    <div class="w-24 h-24 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-handshake text-4xl"></i>
-                    </div>
-                    <div class="font-fredoka text-5xl md:text-6xl mb-2 counter" data-target="17">0</div>
-                    <p class="text-white/80 font-semibold">Govt., NGOs & International<br>Associations</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Stories / Partners -->
-    <section id="stories" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Success Stories</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl mb-4">
-                    <span class="bg-gradient-to-r from-pink to-purple bg-clip-text text-transparent">Trusted By Leading Schools</span>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    We're proud to partner with prestigious schools and organizations across India and internationally.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-school text-blue-600"></i>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="partners-grid">
+                <!-- Partners will be populated via JS-like structure but using static blocks for reliability -->
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center text-3xl text-blue-600">
+                        <i class="fas fa-school"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Sakalya</h4>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-graduation-cap text-green-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center text-3xl text-red-600">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Rotary Bangalore Vidyalaya</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-building text-purple-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-3xl text-purple-600">
+                        <i class="fas fa-globe-asia"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Whitefield Global School</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-globe text-pink-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center text-3xl text-green-600">
+                        <i class="fas fa-seedling"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Flomont World School</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-seedling text-yellow-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center text-3xl text-yellow-600">
+                        <i class="fas fa-flag"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Buds Public School</h4>
                     <p class="text-xs text-gray-500">Dubai</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-star text-orange-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-full flex items-center justify-center text-3xl text-indigo-600">
+                        <i class="fas fa-star"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Oakridge International</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-book text-sky-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full flex items-center justify-center text-3xl text-pink-600">
+                        <i class="fas fa-book-open"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Saraswati Vidyalaya</h4>
                     <p class="text-xs text-gray-500">Nagpur</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-paint-brush text-red-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center text-3xl text-orange-600">
+                        <i class="fas fa-palette"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Global Art Activity Center</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-heart text-indigo-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center text-3xl text-teal-600">
+                        <i class="fas fa-heart"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Linden Montessori</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-deaf text-teal-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center text-3xl text-rose-600">
+                        <i class="fas fa-deaf"></i>
                     </div>
-                    <h4 class="font-bold text-dark text-sm">Vaani Deaf Children Foundation</h4>
+                    <h4 class="font-bold text-dark text-sm">Vaani Deaf Children's Foundation</h4>
                     <p class="text-xs text-gray-500">Tumkuru</p>
                 </div>
-                <div class="partner-card bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer border border-gray-100">
-                    <div class="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-hands-helping text-emerald-600"></i>
+                <div class="partner-item bg-white rounded-2xl p-5 shadow hover:shadow-xl transition text-center">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center text-3xl text-sky-600">
+                        <i class="fas fa-hands-helping"></i>
                     </div>
                     <h4 class="font-bold text-dark text-sm">Vidya NGO</h4>
                     <p class="text-xs text-gray-500">Bengaluru</p>
                 </div>
-                <div class="partner-card bg-gradient-to-br from-primary to-purple rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transform hover:scale-105 cursor-pointer text-white">
-                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mb-3">
-                        <i class="fas fa-plus text-white"></i>
+                <div class="partner-item bg-gradient-to-br from-primary to-purple rounded-2xl p-5 shadow hover:shadow-xl transition text-center text-white cursor-pointer">
+                    <div class="w-20 h-20 mx-auto mb-3 bg-white/20 rounded-full flex items-center justify-center text-3xl">
+                        <i class="fas fa-plus"></i>
                     </div>
                     <h4 class="font-bold text-sm">Partner With Us</h4>
                 </div>
             </div>
+
+            <!-- Pagination dots like stemlabs -->
+            <div class="flex justify-center gap-2 mt-8">
+                <button class="w-3 h-3 rounded-full bg-primary"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400"></button>
+                <span class="text-gray-400 mx-2">...</span>
+                <button class="w-8 h-3 rounded-full bg-gray-300 hover:bg-gray-400 text-xs font-bold">11</button>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
+    <!-- Mission & Vision Section (matches stemlabs) -->
+    <section id="mission" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Testimonials</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl mb-4">
-                    <span class="bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">What Parents & Schools Say</span>
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"Future Kids has transformed my child's approach to learning! The hands-on STEM projects have built incredible confidence and curiosity. Watching my 6-year-old explain robotics concepts is simply amazing."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">PS</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Priya Sharma</h4>
-                            <p class="text-sm text-gray-500">Parent of Aarav, Age 6</p>
-                        </div>
-                    </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="images/kids-robotics.jpg" alt="Kids in STEM class" class="rounded-3xl shadow-2xl w-full" loading="lazy">
                 </div>
-
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"Partnering with Future Kids has been one of our best decisions. Their curriculum is exceptional, and the instructors truly understand how to engage young minds. Our students' creativity has skyrocketed!"</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xl">RK</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Rajesh Kumar</h4>
-                            <p class="text-sm text-gray-500">Principal, Delhi Public School</p>
+                <div class="space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full font-bold text-sm mb-4">
+                            <i class="fas fa-bullseye"></i> Our Mission
                         </div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            To spark <strong>DICE</strong> (Design Thinking, Innovation, Creativity and Entrepreneurship) and foster a deep interest in <strong>STEM</strong> (Science, Technology, Engineering and Math) in children and young adults through hands on practical learning by <strong class="text-primary">"Making"</strong>.
+                        </p>
                     </div>
-                </div>
-
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"My daughter used to be intimidated by technology, but after joining the Block Programming course, she now creates her own games and stories! The one-on-one sessions make all the difference."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-pink-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl">AM</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Anjali Mehta</h4>
-                            <p class="text-sm text-gray-500">Parent of Ishita, Age 9</p>
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-bold text-sm mb-4">
+                            <i class="fas fa-eye"></i> Our Vision
                         </div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            To develop hands-on learning interactive program and educational kit and sets to <strong>revolutionize education system</strong> by encouraging children to build, construct and get creative with our interactive educational Kit and not solely learning through books.
+                        </p>
                     </div>
-                </div>
-
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"The Scientipreneur program gave my teenager real-world skills he wouldn't get anywhere else. He built his first AI project and presented it at a national competition. Truly future-ready education!"</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">VP</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Vikram Patel</h4>
-                            <p class="text-sm text-gray-500">Parent of Arjun, Age 14</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"As a teacher, I've seen firsthand how Future Kids' methodology makes complex STEM concepts accessible and fun for children. The kits are well-designed, and the support team is always responsive."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-sky-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl">SN</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Sneha Nair</h4>
-                            <p class="text-sm text-gray-500">STEM Educator, Bengaluru</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"Our NGO works with underprivileged children, and Future Kids' support has been incredible. They've donated kits and trained our teachers, giving these kids access to world-class STEM education."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl">MR</div>
-                        <div>
-                            <h4 class="font-bold text-dark">Meera Reddy</h4>
-                            <p class="text-sm text-gray-500">Director, Vidya NGO</p>
-                        </div>
-                    </div>
+                    <img src="images/build-play-learn.png" alt="Build Play Learn" class="max-h-32 mx-auto lg:mx-0" loading="lazy" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Popular Models Gallery -->
-    <section class="py-20 bg-white">
+    <!-- HOW IT WORKS Section (new, matching the cyan bar from screenshot) -->
+    <section id="how-it-works" class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-cyan-500 to-teal-500"></div>
+        <div class="absolute top-0 left-0 w-full h-8 bg-white/10">
+            <div class="absolute -top-6 left-10 text-white/20 text-6xl"><i class="fas fa-cogs"></i></div>
+            <div class="absolute -top-6 right-10 text-white/20 text-6xl"><i class="fas fa-cubes"></i></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center text-white mb-12">
+                <h2 class="font-fredoka text-4xl md:text-5xl lg:text-6xl mb-4">HOW FUTURE KIDS WORKS</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-300 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-300 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-yellow-300 rounded-full inline-block"></span>
+                </div>
+                <p class="text-cyan-100 text-lg max-w-2xl mx-auto">Simple 4-step process to kickstart your child's STEM journey with us</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-3xl p-6 text-center shadow-2xl transform hover:-translate-y-2 transition group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4 group-hover:rotate-12 transition">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="font-fredoka text-3xl text-red-500 mb-1">1</div>
+                    <h3 class="font-fredoka text-xl text-dark mb-2">Book Free Demo</h3>
+                    <p class="text-gray-600 text-sm">Sign up for a free STEM or Coding demo class and experience our teaching.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-2xl transform hover:-translate-y-2 transition group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4 group-hover:rotate-12 transition">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="font-fredoka text-3xl text-blue-500 mb-1">2</div>
+                    <h3 class="font-fredoka text-xl text-dark mb-2">Get Assessed</h3>
+                    <p class="text-gray-600 text-sm">Our counselors understand your child's age, interests, and level for the best fit.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-2xl transform hover:-translate-y-2 transition group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4 group-hover:rotate-12 transition">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="font-fredoka text-3xl text-green-500 mb-1">3</div>
+                    <h3 class="font-fredoka text-xl text-dark mb-2">Receive Kit</h3>
+                    <p class="text-gray-600 text-sm">Get our hands-on STEM kit delivered to your doorstep with all required materials.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 text-center shadow-2xl transform hover:-translate-y-2 transition group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4 group-hover:rotate-12 transition">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="font-fredoka text-3xl text-purple-500 mb-1">4</div>
+                    <h3 class="font-fredoka text-xl text-dark mb-2">Start Building</h3>
+                    <p class="text-gray-600 text-sm">Join live classes, build amazing models, learn coding, and become a young innovator!</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <button class="bg-white text-primary px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition flex items-center gap-2">
+                    <i class="fas fa-file-pdf"></i> Download Brochure
+                </button>
+                <button class="bg-red-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-2xl transform hover:scale-105 transition flex items-center gap-2">
+                    <i class="fab fa-youtube"></i> Corporate Video
+                </button>
+            </div>
+        </div>
+        <!-- wave bottom -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 40L60 35C120 30 240 20 360 25C480 30 600 50 720 55C840 60 960 50 1080 42C1200 35 1320 30 1380 27L1440 25V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V40Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Our Programs Section - matches stemlabs structure (3 age groups + Block Programming) -->
+    <section id="programs" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Projects</span>
-                <h2 class="font-fredoka text-4xl md:text-5xl mb-4">
-                    <span class="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Popular Models & Projects</span>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Explore some of the amazing projects our young innovators have built with our STEM kits.
+            <div class="text-center mb-14">
+                <h2 class="font-fredoka text-3xl md:text-5xl text-dark mb-4">Our Programs</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-400 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-400 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-green-400 rounded-full inline-block"></span>
+                </div>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    The curriculum design at Future Kids is developmentally based and focuses on the individual child's social, emotional, and intellectual needs and is oriented on three age groups
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
-                    <i class="fas fa-helicopter text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Helicopter Model</h4>
-                            <p class="text-sm text-gray-200">Ages 4+</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1: Inspire Explorers -->
+                <div class="program-card bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+                    <div class="h-48 bg-gradient-to-br from-yellow-300 to-orange-400 relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20"><i class="fas fa-baby"></i></div>
+                        <div class="text-center text-white relative z-10">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-4xl mx-auto mb-2">
+                                <i class="fas fa-blocks text-white"></i><i class="fas fa-cubes"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold shadow">AGES 3+</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+                        <h3 class="font-fredoka text-2xl text-dark mb-2">Inspire Explorers</h3>
+                        <p class="text-secondary font-bold italic mb-3">Where Kids Discover The Joy Of Education</p>
+                        <p class="text-gray-500 text-sm font-semibold mb-3"><i class="fas fa-graduation-cap mr-1"></i> Grade levels: Nursery, Kg1 and Kg2</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            A Preprimary Program for little hands using <strong>"Build, Play and Learn"</strong> strategy. Building Brilliance via STEM Play and Curriculum for curious minds ages 3 and up.<br><br>
+                            Introduction to Math and Literacy via kinesthetic Learning using Lego-like blocks specifically designed for smaller hands. These bricks allow simple construction and encourage creativity and imagination.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 2: Inspire Builders -->
+                <div class="program-card bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20"><i class="fas fa-child"></i></div>
+                        <div class="text-center text-white relative z-10">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-4xl mx-auto mb-2">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white text-green-600 px-3 py-1 rounded-full text-xs font-bold shadow">AGES 4+</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-1 bg-green-400 rounded-full mb-4"></div>
+                        <h3 class="font-fredoka text-2xl text-dark mb-2">Inspire Builders</h3>
+                        <p class="text-teal-600 font-bold italic mb-3">Stepping Stone to STEM</p>
+                        <p class="text-gray-500 text-sm font-semibold mb-3"><i class="fas fa-graduation-cap mr-1"></i> Grade levels: Std 1 to Std 4</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We provide easy-to-use Future Kids builder kit starting ages 4+ that introduce young students to robotics.<br><br>
+                            Students will be able to build unlimited endless models belonging to different themes. It will help them develop interest and comprehend theoretical science and mathematics which is introduced in school at a very early age.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 3: Inspire Freshmen -->
+                <div class="program-card bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-pink-600 relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20"><i class="fas fa-cog"></i></div>
+                        <div class="text-center text-white relative z-10">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-4xl mx-auto mb-2">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white text-red-600 px-3 py-1 rounded-full text-xs font-bold shadow">AGES 8+</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-1 bg-red-400 rounded-full mb-4"></div>
+                        <h3 class="font-fredoka text-2xl text-dark mb-2">Inspire Freshmen</h3>
+                        <p class="text-red-500 font-bold italic mb-3">Building Motorized Machines</p>
+                        <p class="text-gray-500 text-sm font-semibold mb-3"><i class="fas fa-graduation-cap mr-1"></i> Grade levels: Std 5 to Std 8</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Expand your child's horizons in the field of Robotics by building motorized machines.<br><br>
+                            Our instructor-led STEM curriculum will provide a multi-sensory experience like never before. Children will explore mechanical, mathematical, physical and logical aspects of machinery by building real life motorized machines.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 4: Inspire Scientipreneur -->
+                <div class="program-card bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-indigo-700 relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20"><i class="fas fa-user-astronaut"></i></div>
+                        <div class="text-center text-white relative z-10">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-4xl mx-auto mb-2">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white text-purple-600 px-3 py-1 rounded-full text-xs font-bold shadow">AGES 13+</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-1 bg-purple-400 rounded-full mb-4"></div>
+                        <h3 class="font-fredoka text-2xl text-dark mb-2">Inspire Scientipreneur</h3>
+                        <p class="text-purple-600 font-bold italic mb-3">Developing R&D and Entrepreneurial Mindset</p>
+                        <p class="text-gray-500 text-sm font-semibold mb-3"><i class="fas fa-graduation-cap mr-1"></i> Grade levels: Std 9, Std 10, Std 11, Std 12</p>
+                        <div class="text-gray-600 text-sm leading-relaxed space-y-1">
+                            <p><strong>Tools used:</strong> Inspire Freshman Kit and Lego Digital Designer Software</p>
+                            <p><strong>Course Duration:</strong> 10-Session Year-Round (1 Session Per week)</p>
+                            <p><strong>Duration of Each Session:</strong> 1 Hour each</p>
+                            <p class="mt-2"><strong>Program Strategy:</strong> Helping Kids discover themselves by toying with technology and becoming leaders of 21st Century. Getting them ready for research development mindset by guiding them Ideate, Apply Strategies, and create STEM Project.</p>
                         </div>
                     </div>
                 </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
-                    <i class="fas fa-car text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Motorized Car</h4>
-                            <p class="text-sm text-gray-200">Ages 8+</p>
+
+                <!-- Program 5: Block Programming -->
+                <div class="program-card bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transform hover:-translate-y-2 transition-all md:col-span-2 lg:col-span-2">
+                    <div class="grid md:grid-cols-2">
+                        <div class="h-64 md:h-auto bg-gradient-to-br from-yellow-400 to-orange-500 relative flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20"><i class="fas fa-code"></i></div>
+                            <div class="text-center text-white relative z-10">
+                                <div class="w-24 h-24 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center text-5xl mx-auto">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                            </div>
+                            <div class="absolute top-3 right-3 bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold shadow">AGES 8+</div>
                         </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-                    <i class="fas fa-robot text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">AI Robot</h4>
-                            <p class="text-sm text-gray-200">Ages 13+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
-                    <i class="fas fa-wind text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Windmill</h4>
-                            <p class="text-sm text-gray-200">Ages 4+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center">
-                    <i class="fas fa-plane text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Airplane</h4>
-                            <p class="text-sm text-gray-200">Ages 4+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center">
-                    <i class="fas fa-ferris-wheel text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Ferris Wheel</h4>
-                            <p class="text-sm text-gray-200">Ages 8+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-indigo-500 to-purple-700 flex items-center justify-center">
-                    <i class="fas fa-satellite text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white">
-                            <h4 class="font-bold text-lg">Satellite</h4>
-                            <p class="text-sm text-gray-200">Ages 13+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all cursor-pointer aspect-square bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                    <i class="fas fa-th text-white text-6xl opacity-50 group-hover:scale-110 transition"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-purple/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <div class="text-white text-center">
-                            <h4 class="font-bold text-xl mb-2">Explore More</h4>
-                            <i class="fas fa-arrow-right text-2xl"></i>
+                        <div class="p-6 md:p-8">
+                            <div class="w-12 h-1 bg-yellow-400 rounded-full mb-4"></div>
+                            <h3 class="font-fredoka text-2xl md:text-3xl text-dark mb-2">Block Programming</h3>
+                            <p class="text-gray-500 text-sm font-semibold mb-3"><i class="fas fa-graduation-cap mr-1"></i> Grade levels: Std 5 to Std 9</p>
+                            <p class="text-gray-700 text-base leading-relaxed mb-4">
+                                Code your story with <strong>IBM's Blockly</strong> platform & <strong>Code.Org</strong>
+                            </p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-1"></i> One-on-One Sessions to enhance, elevate core coding concepts in S.T.E.M. in a simple fun way</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-1"></i> Develop logical, decision-making skills with theme-based learning</li>
+                            </ul>
+                            <div class="flex gap-3 mt-5 flex-wrap">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">IBM Blockly</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">Code.org</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold">1-on-1 Sessions</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -802,248 +548,291 @@
         </div>
     </section>
 
-    <!-- App Download CTA -->
-    <section class="py-20 relative overflow-hidden app-bg">
+    <!-- Brand Leaders & Accomplishers Stats (matches stemlabs) -->
+    <section class="py-20 relative overflow-hidden stats-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-fredoka text-3xl md:text-5xl text-white mb-4">Our Brand Leaders & Accomplishers</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-300 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-300 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-green-300 rounded-full inline-block"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center text-white border border-white/20 hover:bg-white/20 transition">
+                    <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="font-fredoka text-5xl md:text-6xl mb-2 stat-counter" data-target="133">0</div>
+                    <p class="text-white/90 font-semibold text-sm leading-tight">Number of Students Graduated from Inspire Builders Program for Ages 4+</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center text-white border border-white/20 hover:bg-white/20 transition">
+                    <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="font-fredoka text-5xl md:text-6xl mb-2 stat-counter" data-target="67">0</div>
+                    <p class="text-white/90 font-semibold text-sm leading-tight">Number of Students Graduated from Inspire Freshman Program for Ages 8+</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center text-white border border-white/20 hover:bg-white/20 transition">
+                    <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="font-fredoka text-5xl md:text-6xl mb-2 stat-counter" data-target="3">0</div>
+                    <p class="text-white/90 font-semibold text-sm leading-tight">Number of Schools in Association with Future Kids</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center text-white border border-white/20 hover:bg-white/20 transition">
+                    <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="font-fredoka text-5xl md:text-6xl mb-2 stat-counter" data-target="17">0</div>
+                    <p class="text-white/90 font-semibold text-sm leading-tight">Number of Government, National, International, NGOs and Special schools in association with Future Kids</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (matches stemlabs "happy parents") -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-fredoka text-3xl md:text-5xl text-dark mb-4">What our happy parents and schools are saying</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-400 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-400 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-green-400 rounded-full inline-block"></span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold mb-3">PS</div>
+                    <h4 class="font-bold text-dark">Priya S.</h4>
+                    <p class="text-xs text-gray-500 mb-2">Parent, Bengaluru</p>
+                    <p class="text-gray-600 text-sm italic">"Future Kids has transformed my son's approach to learning! He now loves building robots and explaining science concepts to us. Best investment for his future!"</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mb-3">RK</div>
+                    <h4 class="font-bold text-dark">Rajesh K.</h4>
+                    <p class="text-xs text-gray-500 mb-2">Principal, DPS</p>
+                    <p class="text-gray-600 text-sm italic">"Partnering with Future Kids elevated our STEM program. Their kits and curriculum are world-class, and the kids absolutely love the sessions!"</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold mb-3">AM</div>
+                    <h4 class="font-bold text-dark">Anjali M.</h4>
+                    <p class="text-xs text-gray-500 mb-2">Parent, Mumbai</p>
+                    <p class="text-gray-600 text-sm italic">"My daughter was scared of coding but after the Block Programming classes, she creates her own games! The teachers are patient and amazing with kids."</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold mb-3">MR</div>
+                    <h4 class="font-bold text-dark">Meera R.</h4>
+                    <p class="text-xs text-gray-500 mb-2">NGO Director</p>
+                    <p class="text-gray-600 text-sm italic">"Future Kids donated kits and trained teachers for our underprivileged children. Seeing these kids build robots is a dream come true!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR MODELS Section - matches stemlabs with SCARECROW, PARK, VEHICLES -->
+    <section id="models" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-fredoka text-3xl md:text-5xl text-dark mb-4">Popular Models</h2>
+                <div class="flex justify-center gap-2 mb-4">
+                    <span class="w-4 h-4 bg-pink-400 rounded-full inline-block"></span>
+                    <span class="w-4 h-4 bg-red-400 rounded-full inline-block scale-75"></span>
+                    <span class="w-4 h-4 bg-green-400 rounded-full inline-block"></span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 items-center mb-10">
+                <div class="model-card relative rounded-2xl overflow-hidden shadow-xl cursor-pointer group">
+                    <img src="images/scarecrow.jpg" alt="Scarecrow Model" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <h3 class="font-fredoka text-3xl md:text-4xl text-white">SCARECROW</h3>
+                    </div>
+                </div>
+                <div class="model-card relative rounded-2xl overflow-hidden shadow-xl cursor-pointer group">
+                    <img src="images/park.jpg" alt="Park Model" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <h3 class="font-fredoka text-3xl md:text-4xl text-white">PARK</h3>
+                    </div>
+                </div>
+                <div class="model-card relative rounded-2xl overflow-hidden shadow-xl cursor-pointer group">
+                    <img src="images/vehicles.jpg" alt="Vehicles Model" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <h3 class="font-fredoka text-3xl md:text-4xl text-white">VEHICLES</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="border-2 border-gray-300 text-gray-700 hover:border-primary hover:text-primary px-8 py-3 rounded font-bold transition bg-white">
+                    EXPLORE MANY MORE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section - matches stemlabs with yellow-orange gradient and multiple phones -->
+    <section class="py-20 relative overflow-hidden app-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-center lg:text-left text-white">
-                    <span class="inline-block bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full font-bold text-sm mb-4">Mobile App</span>
-                    <h2 class="font-fredoka text-4xl md:text-5xl mb-6">Download the<br>Future Kids App</h2>
-                    <p class="text-white/80 text-lg mb-8 leading-relaxed">
-                        Take learning on the go! Access 100+ STEM projects, track your child's progress, and join live classes right from your phone. Learning has never been this fun!
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="#" class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition transform hover:scale-105">
-                            <i class="fab fa-apple text-3xl"></i>
+                <div class="order-2 lg:order-1 relative flex justify-center lg:justify-start">
+                    <!-- Multiple phone mockups like stemlabs -->
+                    <div class="relative flex items-end" style="min-height:450px;">
+                        <!-- Phone 1 -->
+                        <div class="absolute left-0 bottom-0 w-48 bg-gray-900 rounded-[2rem] p-2 shadow-2xl z-10 transform -rotate-6">
+                            <div class="w-full h-80 bg-white rounded-[1.7rem] overflow-hidden relative">
+                                <img src="images/app-screen-1.png" alt="App Screen 1" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML+='<div class=\'absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-center p-4\'><div><i class=\'fas fa-mobile-alt text-4xl mb-2\'></i><div class=\'font-bold\'>Dashboard</div></div></div>'">
+                            </div>
+                        </div>
+                        <!-- Phone 2 (center - main) -->
+                        <div class="relative w-56 bg-gray-900 rounded-[2rem] p-2 shadow-2xl z-20 mx-4">
+                            <div class="w-full h-96 bg-white rounded-[1.7rem] overflow-hidden relative">
+                                <img src="images/app-screen-2.png" alt="App Screen 2" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML+='<div class=\'absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-center p-4\'><div><i class=\'fas fa-gamepad text-4xl mb-2\'></i><div class=\'font-bold\'>Learn & Play</div></div></div>'">
+                            </div>
+                        </div>
+                        <!-- Phone 3 -->
+                        <div class="absolute right-0 bottom-0 w-48 bg-gray-900 rounded-[2rem] p-2 shadow-2xl z-10 transform rotate-6">
+                            <div class="w-full h-80 bg-white rounded-[1.7rem] overflow-hidden relative">
+                                <img src="images/app-screen-3.png" alt="App Screen 3" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.innerHTML+='<div class=\'absolute inset-0 bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center text-white text-center p-4\'><div><i class=\'fas fa-tree text-4xl mb-2\'></i><div class=\'font-bold\'>Tree Project</div></div></div>'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 text-center lg:text-left text-white">
+                    <div class="inline-block mb-4">
+                        <img src="images/app-screens-placeholder.png" alt="" class="hidden" onerror="this.remove()">
+                    </div>
+                    <h2 class="font-fredoka text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight">Download our App</h2>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-6">
+                        <a href="#" class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition transform hover:scale-105 shadow-xl">
+                            <i class="fab fa-apple text-4xl"></i>
                             <div class="text-left">
-                                <div class="text-xs text-gray-400">Download on the</div>
+                                <div class="text-xs text-gray-400">Available on the</div>
                                 <div class="font-bold text-lg">App Store</div>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition transform hover:scale-105">
+                        <a href="#" class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition transform hover:scale-105 shadow-xl">
                             <i class="fab fa-google-play text-3xl"></i>
                             <div class="text-left">
-                                <div class="text-xs text-gray-400">Get it on</div>
+                                <div class="text-xs text-gray-400">Android app on</div>
                                 <div class="font-bold text-lg">Google Play</div>
                             </div>
                         </a>
                     </div>
-                </div>
-                <div class="flex justify-center relative">
-                    <div class="relative">
-                        <div class="w-64 h-[32rem] bg-gray-900 rounded-[3rem] p-3 shadow-2xl transform hover:rotate-3 transition">
-                            <div class="w-full h-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-white text-center overflow-hidden relative">
-                                <div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-gray-900 rounded-full"></div>
-                                <div class="mt-8">
-                                    <div class="text-6xl mb-4"><i class="fas fa-rocket animate-bounce-slow"></i></div>
-                                    <div class="font-fredoka text-2xl mb-2">Future Kids</div>
-                                    <div class="text-sm opacity-80 mb-8">Learn STEM Anywhere!</div>
-                                    <div class="space-y-3 w-full">
-                                        <div class="bg-white/20 backdrop-blur rounded-xl p-3 flex items-center gap-3">
-                                            <i class="fas fa-graduation-cap"></i>
-                                            <span class="text-sm font-semibold">Live Classes</span>
-                                        </div>
-                                        <div class="bg-white/20 backdrop-blur rounded-xl p-3 flex items-center gap-3">
-                                            <i class="fas fa-project-diagram"></i>
-                                            <span class="text-sm font-semibold">100+ Projects</span>
-                                        </div>
-                                        <div class="bg-white/20 backdrop-blur rounded-xl p-3 flex items-center gap-3">
-                                            <i class="fas fa-trophy"></i>
-                                            <span class="text-sm font-semibold">Achievements</span>
-                                        </div>
-                                        <div class="bg-white/20 backdrop-blur rounded-xl p-3 flex items-center gap-3">
-                                            <i class="fas fa-users"></i>
-                                            <span class="text-sm font-semibold">Community</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" class="inline-flex items-center gap-2 text-white font-bold text-lg hover:underline mt-4">
+                        <i class="fab fa-youtube text-red-400 text-2xl"></i>
+                        How to Use Future Kids App Tutorial
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact / Book Class CTA -->
     <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <span class="inline-block bg-sky-100 text-sky-700 px-4 py-2 rounded-full font-bold text-sm mb-4">Get In Touch</span>
-                    <h2 class="font-fredoka text-4xl md:text-5xl mb-6">
-                        <span class="bg-gradient-to-r from-sky to-primary bg-clip-text text-transparent">Ready to Start the Journey?</span>
-                    </h2>
-                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                        Book a free demo class today and see how Future Kids can transform your child's future! Our counselors are ready to guide you.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">Visit Us</h4>
-                                <p class="text-gray-600">Future Kids HQ, Tech Park, Bengaluru, Karnataka 560001, India</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">Call Us</h4>
-                                <p class="text-gray-600">+91 98765 43210<br>+91 80 1234 5678</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">Email Us</h4>
-                                <p class="text-gray-600">hello@futurekids.edu<br>support@futurekids.edu</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 mt-8">
-                        <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transform hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white hover:bg-sky-600 transform hover:scale-110 transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transform hover:scale-110 transition"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full flex items-center justify-center text-white hover:opacity-90 transform hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transform hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-3xl p-8 shadow-xl">
-                    <h3 class="font-fredoka text-2xl text-dark mb-6">Book a Free Class</h3>
-                    <form id="contact-form" class="space-y-5">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Parent's Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="Enter your name" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Child's Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="Enter child's name" required>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Age of Child</label>
-                                <select class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition">
-                                    <option>3-5 years</option>
-                                    <option>6-8 years</option>
-                                    <option>9-12 years</option>
-                                    <option>13+ years</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="+91" required>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="your@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Interested Program</label>
-                            <select class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition">
-                                <option>Inspire Explorers (Ages 3+)</option>
-                                <option>Inspire Builders (Ages 4+)</option>
-                                <option>Inspire Freshmen (Ages 8+)</option>
-                                <option>Block Programming (Ages 8+)</option>
-                                <option>AI & Robotics Pro (Ages 10+)</option>
-                                <option>Inspire Scientipreneur (Ages 13+)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full btn-gradient text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition">
-                            <i class="fas fa-paper-plane mr-2"></i>Book My Free Class Now!
-                        </button>
-                    </form>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-primary via-purple to-pink rounded-3xl p-8 md:p-12 shadow-2xl text-center text-white">
+                <h2 class="font-fredoka text-3xl md:text-5xl mb-4">Ready to Start Your Child's STEM Journey?</h2>
+                <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Book a free demo class today and watch your child become a future innovator!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                    <input type="text" placeholder="Enter Parent's Phone Number" class="flex-1 px-6 py-4 rounded-full text-gray-800 font-semibold focus:outline-none focus:ring-4 focus:ring-white/30">
+                    <button class="bg-yellow-400 text-dark px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap">
+                        Book Free Class <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-20 pb-8">
+    <!-- Footer (matches stemlabs links) -->
+    <footer class="bg-gray-900 text-white pt-16 pb-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                 <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <div class="w-12 h-12 btn-gradient rounded-xl flex items-center justify-center text-white text-2xl">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-primary to-purple rounded-xl flex items-center justify-center text-white text-xl">
                             <i class="fas fa-rocket"></i>
                         </div>
                         <span class="font-fredoka text-2xl">Future Kids</span>
                     </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Inspiring young minds through hands-on STEM education. Building future leaders, innovators, and entrepreneurs one child at a time.
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Spark creativity, innovation and entrepreneurship through hands-on STEM learning for children across India.
                     </p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-700 transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition text-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 bg-sky-500 rounded-full flex items-center justify-center text-white hover:bg-sky-600 transition text-sm"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-9 h-9 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition text-sm"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full flex items-center justify-center text-white hover:opacity-90 transition text-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition text-sm"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="font-fredoka text-xl mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>About Us</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Programs</a></li>
-                        <li><a href="#stories" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Success Stories</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Testimonials</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contact</a></li>
+                    <h4 class="font-fredoka text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Affiliation Certificate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Refund Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms And Conditions</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-fredoka text-xl mb-6">Programs</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inspire Explorers (3+)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inspire Builders (4+)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inspire Freshmen (8+)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Block Programming (8+)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>AI & Robotics Pro (10+)</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Scientipreneur (13+)</a></li>
+                    <h4 class="font-fredoka text-lg mb-4 text-white">Programs</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inspire Explorers (3+)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inspire Builders (4+)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inspire Freshmen (8+)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Block Programming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inspire Scientipreneur (13+)</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-fredoka text-xl mb-6">Resources</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Download Brochure</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Corporate Video</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Affiliation Certificate</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Terms & Conditions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-chevron-right mr-2 text-xs"></i>Refund Policy</a></li>
+                    <h4 class="font-fredoka text-lg mb-4 text-white">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-primary mt-1"></i> Future Kids HQ, Tech Park, Bengaluru, Karnataka 560001</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone text-primary"></i> +91 98765 43210</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope text-primary"></i> hello@futurekids.edu</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-gray-400 text-sm text-center md:text-left">
-                        © 2026 Future Kids. All rights reserved. Made with <i class="fas fa-heart text-red-500"></i> for young innovators.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <a href="#" class="bg-white/10 px-4 py-2 rounded-lg text-sm hover:bg-white/20 transition"><i class="fab fa-apple mr-2"></i>App Store</a>
-                        <a href="#" class="bg-white/10 px-4 py-2 rounded-lg text-sm hover:bg-white/20 transition"><i class="fab fa-google-play mr-2"></i>Play Store</a>
-                    </div>
-                </div>
+            <div class="border-t border-gray-800 pt-6 text-center">
+                <p class="text-gray-500 text-sm">Copyright © 2026 Future Kids. All rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 btn-gradient text-white rounded-full shadow-2xl opacity-0 invisible transition-all z-50 flex items-center justify-center text-xl hover:scale-110">
+    <!-- Floating Social Sidebar (like stemlabs) -->
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-0 shadow-2xl rounded-l-xl overflow-hidden hidden md:flex">
+        <a href="#" class="w-11 h-11 bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-white text-sm transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="w-11 h-11 bg-sky-500 hover:bg-sky-600 flex items-center justify-center text-white text-sm transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="w-11 h-11 bg-blue-700 hover:bg-blue-800 flex items-center justify-center text-white text-sm transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="w-11 h-11 bg-gradient-to-br from-purple-600 to-pink-500 hover:opacity-90 flex items-center justify-center text-white text-sm transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="w-11 h-11 bg-red-600 hover:bg-red-700 flex items-center justify-center text-white text-sm transition"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-12 h-12 btn-cyan text-white rounded-full shadow-xl opacity-0 invisible transition-all z-50 flex items-center justify-center hover:scale-110">
         <i class="fas fa-arrow-up"></i>
     </button>
 

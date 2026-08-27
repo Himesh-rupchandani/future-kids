@@ -1,176 +1,133 @@
 /* ============================
    Future Kids - Custom Styles
+   Matches Stemlabs color theme (cyan/teal) but more vibrant
    ============================ */
 
 :root {
-    --primary: #4F46E5;
-    --secondary: #F59E0B;
-    --accent: #10B981;
-    --purple: #8B5CF6;
+    --primary: #06B6D4;    /* Cyan - matches stemlabs top bar */
+    --secondary: #F97316;  /* Orange */
+    --accent: #22C55E;
+    --purple: #A855F7;
     --pink: #EC4899;
-    --sky: #0EA5E9;
+    --yellow: #FACC15;
 }
 
-html {
-    scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; }
+
+/* ===== Gradient Buttons ===== */
+.btn-cyan {
+    background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+    transition: all 0.3s ease;
+}
+.btn-cyan:hover {
+    background: linear-gradient(135deg, #0891B2 0%, #0E7490 100%);
 }
 
-body {
-    font-family: 'Nunito', sans-serif;
+.btn-purple {
+    background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+    transition: all 0.3s ease;
+}
+.btn-purple:hover {
+    background: linear-gradient(135deg, #9333EA 0%, #6D28D9 100%);
 }
 
-/* ===== Gradient Buttons & Backgrounds ===== */
-.btn-gradient {
-    background: linear-gradient(135deg, #4F46E5 0%, #8B5CF6 50%, #EC4899 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 3s ease infinite;
+.btn-orange {
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    transition: all 0.3s ease;
+}
+.btn-orange:hover {
+    background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.logo-icon-bg {
+    background: linear-gradient(135deg, #06B6D4, #A855F7);
 }
 
-.logo-icon {
-    background: linear-gradient(135deg, #4F46E5, #8B5CF6, #EC4899);
-    background-size: 200% 200%;
-    animation: gradientShift 4s ease infinite;
+/* ===== Hero Gradient ===== */
+.hero-gradient {
+    background: linear-gradient(135deg, #ecfeff 0%, #faf5ff 50%, #fff7ed 100%);
 }
 
-/* ===== Hero Background ===== */
-.hero-bg {
-    background: linear-gradient(135deg, #f0f4ff 0%, #fdf2f8 50%, #fff7ed 100%);
+.stats-gradient {
+    background: linear-gradient(135deg, #06B6D4 0%, #0891B2 30%, #7C3AED 100%);
 }
 
-.stats-bg {
-    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+.app-gradient {
+    background: linear-gradient(180deg, #FACC15 0%, #F97316 40%, #F59E0B 100%);
 }
 
-.app-bg {
-    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 40%, #EC4899 100%);
-}
-
-/* ===== Floating Shapes ===== */
-.floating-shapes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
+/* ===== BPL Cards (Build Play Learn) ===== */
+.bpl-card {
+    position: relative;
     overflow: hidden;
 }
-
-.shape {
+.bpl-card::before {
+    content: '';
     position: absolute;
-    border-radius: 50%;
-    opacity: 0.15;
-    animation: float 20s infinite ease-in-out;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+}
+.bpl-card:hover::before {
+    animation: shine 0.8s ease;
+}
+@keyframes shine {
+    0% { left: -50%; opacity: 1; }
+    100% { left: 150%; opacity: 0; }
 }
 
-.shape-1 {
-    width: 80px;
-    height: 80px;
-    background: #4F46E5;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
+/* ===== DICE Letters ===== */
+.dice-letter {
+    position: relative;
+    overflow: hidden;
 }
-
-.shape-2 {
-    width: 120px;
-    height: 120px;
-    background: #EC4899;
-    top: 60%;
-    left: 2%;
-    animation-delay: 2s;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-.shape-3 {
-    width: 100px;
-    height: 100px;
-    background: #F59E0B;
-    top: 30%;
-    right: 3%;
-    animation-delay: 4s;
-}
-
-.shape-4 {
-    width: 140px;
-    height: 140px;
-    background: #10B981;
-    top: 75%;
-    right: 5%;
-    animation-delay: 6s;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-.shape-5 {
+.dice-letter::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
     width: 60px;
     height: 60px;
-    background: #0EA5E9;
-    top: 15%;
-    right: 15%;
-    animation-delay: 8s;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    25% {
-        transform: translateY(-30px) rotate(90deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(180deg);
-    }
-    75% {
-        transform: translateY(-40px) rotate(270deg);
-    }
+/* ===== Program Card hover lift ===== */
+.program-card {
+    transition: all 0.3s ease;
+}
+.program-card:hover {
+    transform: translateY(-8px);
 }
 
-/* ===== Animations ===== */
-@keyframes bounce-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+/* ===== Partner item hover ===== */
+.partner-item {
+    transition: all 0.3s ease;
+}
+.partner-item:hover i {
+    transform: scale(1.15) rotate(10deg);
+    transition: transform 0.3s ease;
 }
 
-.animate-bounce-slow {
-    animation: bounce-slow 3s ease-in-out infinite;
+/* ===== Model Card zoom ===== */
+.model-card img {
+    transition: transform 0.5s ease;
 }
 
-@keyframes pulse-slow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
-    50% { box-shadow: 0 0 0 15px rgba(79, 70, 229, 0); }
+/* ===== Navigation ===== */
+#navbar {
+    transition: all 0.3s ease;
 }
-
-.animate-pulse-slow {
-    animation: pulse-slow 2s infinite;
-}
-
-/* ===== Card Bounce ===== */
-.card-bounce {
-    animation: cardFloat 4s ease-in-out infinite;
-}
-
-.card-bounce-delay {
-    animation: cardFloat 4s ease-in-out infinite;
-    animation-delay: 1s;
-}
-
-@keyframes cardFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* ===== Nav Link Hover Underline ===== */
 .nav-link {
     position: relative;
+    padding-bottom: 2px;
 }
-
 .nav-link::after {
     content: '';
     position: absolute;
@@ -178,162 +135,89 @@ body {
     left: 0;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, #4F46E5, #EC4899);
+    background: #06B6D4;
     border-radius: 2px;
     transition: width 0.3s ease;
 }
-
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* ===== Navbar Scroll Effect ===== */
-.nav-scrolled {
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== Program Card Hover ===== */
-.program-card {
-    position: relative;
-}
-
-.program-card::before {
-    content: '';
+/* ===== Wave divider ===== */
+.wave-divider {
     position: absolute;
-    top: 0;
+    bottom: -1px;
     left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #4F46E5, #8B5CF6, #EC4899);
-    border-radius: 2px 2px 0 0;
-    opacity: 0;
-    transition: opacity 0.3s;
+    width: 100%;
+    line-height: 0;
 }
 
-.program-card:hover::before {
-    opacity: 1;
+/* ===== Mobile Menu ===== */
+#mobile-menu {
+    animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Partner Card Hover ===== */
-.partner-card:hover .partner-icon-bg {
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* ===== Testimonial Card Quote ===== */
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 100px;
-    color: #E0E7FF;
-    line-height: 1;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.testimonial-card {
-    position: relative;
-    z-index: 1;
-}
-
-/* ===== Scroll Reveal Animation Classes ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== Input Focus States ===== */
-input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+/* ===== Scroll to top ===== */
+#scroll-top {
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
 }
 
 /* ===== Custom Scrollbar ===== */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f5f9;
-}
-
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+    background: linear-gradient(135deg, #06B6D4, #A855F7);
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #4338CA, #7C3AED);
+    background: linear-gradient(135deg, #0891B2, #9333EA);
 }
 
-/* ===== Counter Animation ===== */
-.counter {
-    display: inline-block;
+/* ===== Stat counter ===== */
+.stat-counter {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* ===== Mobile Responsiveness Fine-tuning ===== */
+/* ===== Floating social sidebar ===== */
+.fixed.right-0 a {
+    transition: all 0.2s ease;
+}
+.fixed.right-0 a:hover {
+    width: 48px;
+}
+
+/* ===== Form focus ===== */
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15);
+    outline: none;
+}
+
+/* ===== Pulse dot on welcome badge ===== */
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+}
+.animate-pulse {
+    animation: pulse-dot 1.5s infinite;
+}
+
+/* ===== Responsive tweaks ===== */
 @media (max-width: 768px) {
-    .floating-shapes .shape {
-        display: none;
-    }
-    
-    .font-fredoka {
-        word-wrap: break-word;
-    }
+    .font-fredoka { word-break: break-word; }
+    .wave-divider svg { height: 40px; }
 }
 
-/* ===== Loading animation for buttons ===== */
-.btn-gradient:active {
-    transform: scale(0.97);
+/* ===== Fade-in on scroll ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
 }
-
-/* ===== Tooltip-like badge animation ===== */
-@keyframes badgePulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.badge-pulse {
-    animation: badgePulse 2s infinite;
-}
-
-/* ===== Section title underline decorative ===== */
-.section-title {
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #F59E0B, #EC4899);
-    border-radius: 2px;
-}
-
-/* ===== Partner icon spin on hover ===== */
-.partner-card:hover i {
-    animation: iconSpin 0.5s ease;
-}
-
-@keyframes iconSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* ===== Form success state ===== */
-.form-success {
-    background: linear-gradient(135deg, #10B981, #059669) !important;
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
