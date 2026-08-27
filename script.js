@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let countersStarted = false;
 
     function animateCounters() {
+        if (countersStarted) return;
+        countersStarted = true;
         counters.forEach(counter => {
             const target = parseInt(counter.getAttribute('data-target'));
             const duration = 2000;
@@ -95,14 +97,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const statsSection = document.querySelector('.stats-gradient');
     if (statsSection) {
+        // Multiple triggers for reliability
+        const checkStats = () => {
+            const rect = statsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                animateCounters();
+            }
+        };
+        window.addEventListener('scroll', checkStats, { passive: true });
+        setTimeout(checkStats, 500);
+
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !countersStarted) {
-                    animateCounters();
-                    countersStarted = true;
-                }
+                if (entry.isIntersecting) animateCounters();
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.15 });
         obs.observe(statsSection);
     }
 
