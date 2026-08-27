@@ -1,11 +1,10 @@
 /* ============================
-   Future Kids - Custom Styles
-   Matches Stemlabs color theme (cyan/teal) but more vibrant
+   Future Kids - Enhanced Styles
    ============================ */
 
 :root {
-    --primary: #06B6D4;    /* Cyan - matches stemlabs top bar */
-    --secondary: #F97316;  /* Orange */
+    --primary: #06B6D4;
+    --secondary: #F97316;
     --accent: #22C55E;
     --purple: #A855F7;
     --pink: #EC4899;
@@ -13,7 +12,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Nunito', sans-serif; }
+body { font-family: 'Nunito', sans-serif; position: relative; }
 
 /* ===== Gradient Buttons ===== */
 .btn-cyan {
@@ -22,151 +21,367 @@ body { font-family: 'Nunito', sans-serif; }
 }
 .btn-cyan:hover {
     background: linear-gradient(135deg, #0891B2 0%, #0E7490 100%);
+    box-shadow: 0 10px 30px rgba(6,182,212,0.4);
 }
-
 .btn-purple {
     background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
     transition: all 0.3s ease;
 }
 .btn-purple:hover {
     background: linear-gradient(135deg, #9333EA 0%, #6D28D9 100%);
+    box-shadow: 0 10px 30px rgba(168,85,247,0.4);
 }
-
 .btn-orange {
     background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
     transition: all 0.3s ease;
 }
 .btn-orange:hover {
     background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+    box-shadow: 0 10px 30px rgba(249,115,22,0.4);
 }
-
 .logo-icon-bg {
     background: linear-gradient(135deg, #06B6D4, #A855F7);
+    animation: logoPulse 3s ease-in-out infinite;
+}
+@keyframes logoPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(6,182,212,0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(6,182,212,0); }
 }
 
-/* ===== Hero Gradient ===== */
+/* ===== Backgrounds ===== */
 .hero-gradient {
     background: linear-gradient(135deg, #ecfeff 0%, #faf5ff 50%, #fff7ed 100%);
+    position: relative;
 }
-
 .stats-gradient {
-    background: linear-gradient(135deg, #06B6D4 0%, #0891B2 30%, #7C3AED 100%);
+    background: linear-gradient(135deg, #06B6D4 0%, #0891B2 30%, #7C3AED 70%, #A855F7 100%);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
 }
-
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 .app-gradient {
-    background: linear-gradient(180deg, #FACC15 0%, #F97316 40%, #F59E0B 100%);
+    background: linear-gradient(180deg, #FDE047 0%, #F97316 50%, #EA580C 100%);
+    position: relative;
 }
 
-/* ===== BPL Cards (Build Play Learn) ===== */
-.bpl-card {
+/* ===== DICE Card Gradients (THE FIX FOR THE WHITE CARD!) ===== */
+.dice-gradient-1 {
+    background: linear-gradient(135deg, #06B6D4 0%, #2563EB 100%) !important;
+    background-color: #06B6D4 !important;
+}
+.dice-gradient-2 {
+    background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%) !important;
+    background-color: #A855F7 !important;
+}
+.dice-gradient-3 {
+    background: linear-gradient(135deg, #FB923C 0%, #EF4444 100%) !important;
+    background-color: #FB923C !important;
+}
+.dice-gradient-4 {
+    background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+    background-color: #22C55E !important;
+}
+.dice-card {
     position: relative;
     overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.2);
+    animation: dicePop 0.6s ease-out backwards;
 }
-.bpl-card::before {
+.dice-card:nth-child(1) { animation-delay: 0.1s; }
+.dice-card:nth-child(2) { animation-delay: 0.25s; }
+.dice-card:nth-child(3) { animation-delay: 0.4s; }
+.dice-card:nth-child(4) { animation-delay: 0.55s; }
+@keyframes dicePop {
+    from { opacity: 0; transform: translateY(40px) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.dice-card::before {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.15), transparent);
     transform: rotate(45deg);
-    transition: all 0.5s;
+    transition: all 0.6s;
     opacity: 0;
 }
-.bpl-card:hover::before {
+.dice-card:hover::before {
     animation: shine 0.8s ease;
+    opacity: 1;
 }
 @keyframes shine {
-    0% { left: -50%; opacity: 1; }
-    100% { left: 150%; opacity: 0; }
+    0% { left: -100%; }
+    100% { left: 200%; }
 }
 
-/* ===== DICE Letters ===== */
-.dice-letter {
+/* ===== BPL Cards ===== */
+.bpl-card {
     position: relative;
     overflow: hidden;
+    animation: bplBounce 3s ease-in-out infinite;
 }
-.dice-letter::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 60px;
-    height: 60px;
-    background: rgba(255,255,255,0.1);
+.bpl-card:nth-child(2) { animation-delay: 0.3s; }
+.bpl-card:nth-child(3) { animation-delay: 0.6s; }
+@keyframes bplBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===== Floating Blobs ===== */
+.blob {
+    position: fixed;
     border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
 }
-
-/* ===== Program Card hover lift ===== */
-.program-card {
-    transition: all 0.3s ease;
-}
-.program-card:hover {
-    transform: translateY(-8px);
-}
-
-/* ===== Partner item hover ===== */
-.partner-item {
-    transition: all 0.3s ease;
-}
-.partner-item:hover i {
-    transform: scale(1.15) rotate(10deg);
-    transition: transform 0.3s ease;
-}
-
-/* ===== Model Card zoom ===== */
-.model-card img {
-    transition: transform 0.5s ease;
-}
-
-/* ===== Navigation ===== */
-#navbar {
-    transition: all 0.3s ease;
-}
-.nav-link {
-    position: relative;
-    padding-bottom: 2px;
-}
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 3px;
+.blob-1 {
+    width: 300px; height: 300px;
     background: #06B6D4;
-    border-radius: 2px;
-    transition: width 0.3s ease;
+    top: 10%; left: -100px;
+    animation: blobMove1 20s infinite ease-in-out;
 }
-.nav-link:hover::after {
-    width: 100%;
+.blob-2 {
+    width: 400px; height: 400px;
+    background: #A855F7;
+    top: 40%; right: -150px;
+    animation: blobMove2 25s infinite ease-in-out;
+}
+.blob-3 {
+    width: 250px; height: 250px;
+    background: #F97316;
+    bottom: 10%; left: 20%;
+    animation: blobMove3 22s infinite ease-in-out;
+}
+.blob-4 {
+    width: 200px; height: 200px;
+    background: #EC4899;
+    top: 60%; left: 60%;
+    animation: blobMove4 18s infinite ease-in-out;
+}
+@keyframes blobMove1 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(50px,-30px) scale(1.1); }
+    66% { transform: translate(-30px,40px) scale(0.9); }
+}
+@keyframes blobMove2 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(-60px,40px) scale(0.9); }
+    66% { transform: translate(40px,-50px) scale(1.1); }
+}
+@keyframes blobMove3 {
+    0%,100% { transform: translate(0,0); }
+    50% { transform: translate(40px,-40px); }
+}
+@keyframes blobMove4 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-50px,30px) scale(1.2); }
 }
 
-/* ===== Wave divider ===== */
-.wave-divider {
+/* ===== Sparkle Container ===== */
+.sparkle-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.sparkle {
     position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    line-height: 0;
+    width: 6px; height: 6px;
+    background: #FACC15;
+    border-radius: 50%;
+    animation: sparkleAnim 3s infinite;
+    box-shadow: 0 0 10px #FACC15;
+}
+@keyframes sparkleAnim {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
 }
 
-/* ===== Mobile Menu ===== */
-#mobile-menu {
-    animation: slideDown 0.3s ease;
+/* ===== Animations ===== */
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
+.animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-delay { animation: float 4s ease-in-out infinite; animation-delay: 1s; }
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 10s linear infinite; }
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,0.7); }
+    50% { opacity: 0.7; transform: scale(1.2); box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+}
+.animate-pulse-dot { animation: pulse-dot 2s infinite; }
+
+@keyframes gradientText {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+.animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradientText 4s ease infinite;
+}
+
+@keyframes badgePop {
+    0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+    60% { transform: scale(1.1) rotate(2deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+.badge-pop { animation: badgePop 0.8s ease-out backwards; }
+
+@keyframes badgeBounce {
+    0%, 100% { transform: rotate(12deg) translateY(0); }
+    50% { transform: rotate(12deg) translateY(-8px); }
+}
+.badge-bounce { animation: badgeBounce 2s ease-in-out infinite; }
+.badge-bounce-delay { animation: badgeBounce 2s ease-in-out infinite; animation-delay: 0.5s; }
+
+@keyframes imgFloat {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+.img-float { animation: imgFloat 5s ease-in-out infinite; }
+
+@keyframes dotPop {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.3); }
+    100% { transform: scale(1); opacity: 1; }
+}
+.dot-pop { animation: dotPop 0.5s ease-out backwards; }
+
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+.animate-slideDown { animation: slideDown 0.3s ease; }
+
+/* ===== Shimmer effect for CTA ===== */
+.bg-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmerMove 3s infinite;
+}
+@keyframes shimmerMove {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.cta-glow {
+    animation: ctaGlow 3s ease-in-out infinite;
+}
+@keyframes ctaGlow {
+    0%, 100% { box-shadow: 0 20px 60px rgba(168,85,247,0.3); }
+    50% { box-shadow: 0 20px 80px rgba(236,72,153,0.5); }
+}
+
+/* ===== Title animation ===== */
+.title-animate > span {
+    display: inline-block;
+    opacity: 0;
+    animation: titleFade 0.8s ease forwards;
+}
+.title-animate { animation: none; }
+@keyframes titleFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Navigation ===== */
+#navbar { transition: all 0.3s ease; }
+.nav-link { position: relative; padding-bottom: 2px; }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 3px;
+    background: linear-gradient(90deg, #06B6D4, #A855F7);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ===== Partner Icons ===== */
+.partner-icon { transition: all 0.3s ease; }
+.partner-item:hover .partner-icon {
+    transform: scale(1.2) rotate(15deg);
+}
+.special-cta { transform-style: preserve-3d; }
+
+/* ===== Program Card hover ===== */
+.program-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.program-card:hover { transform: translateY(-12px); }
+
+/* ===== Step Card ===== */
+.step-card {
+    animation: stepFade 0.6s ease-out backwards;
+}
+.step-card:nth-child(1) { animation-delay: 0.1s; }
+.step-card:nth-child(2) { animation-delay: 0.25s; }
+.step-card:nth-child(3) { animation-delay: 0.4s; }
+.step-card:nth-child(4) { animation-delay: 0.55s; }
+@keyframes stepFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Stat icons ===== */
+.stat-icon { transition: all 0.3s ease; }
+.stat-card:hover .stat-icon { transform: scale(1.2) rotate(10deg); }
+
+/* ===== Model Cards ===== */
+.model-card { animation: modelFade 0.8s ease-out backwards; }
+.model-card:nth-child(1) { animation-delay: 0.1s; }
+.model-card:nth-child(2) { animation-delay: 0.25s; }
+.model-card:nth-child(3) { animation-delay: 0.4s; }
+@keyframes modelFade {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ===== Testi cards ===== */
+.testi-card { transition: all 0.3s ease; }
+.testi-card:hover { transform: translateY(-8px) !important; }
+
+/* ===== Mission cards ===== */
+.mission-card { transition: all 0.3s ease; }
 
 /* ===== Scroll to top ===== */
 #scroll-top {
     background: linear-gradient(135deg, #06B6D4, #0891B2);
+    transition: all 0.3s ease;
+}
+#scroll-top:hover { box-shadow: 0 10px 30px rgba(6,182,212,0.5); }
+
+/* ===== Social sidebar ===== */
+.social-sidebar a { transition: all 0.3s ease; }
+
+/* ===== Section header ===== */
+.section-header { animation: sectionFade 0.8s ease-out; }
+@keyframes sectionFade {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Custom Scrollbar ===== */
+/* ===== Scrollbar ===== */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb {
@@ -177,47 +392,24 @@ body { font-family: 'Nunito', sans-serif; }
     background: linear-gradient(135deg, #0891B2, #9333EA);
 }
 
-/* ===== Stat counter ===== */
-.stat-counter {
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-/* ===== Floating social sidebar ===== */
-.fixed.right-0 a {
-    transition: all 0.2s ease;
-}
-.fixed.right-0 a:hover {
-    width: 48px;
-}
-
 /* ===== Form focus ===== */
 input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 0 0 4px rgba(6,182,212,0.2);
     outline: none;
 }
 
-/* ===== Pulse dot on welcome badge ===== */
-@keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.3); }
-}
-.animate-pulse {
-    animation: pulse-dot 1.5s infinite;
-}
+/* ===== Ensure sections show above blobs ===== */
+section, nav, footer, .fixed { position: relative; z-index: 10; }
+section { z-index: 5; }
+.sparkle-container, .blob { z-index: 1; }
 
-/* ===== Responsive tweaks ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
+    .blob { display: none; }
     .font-fredoka { word-break: break-word; }
-    .wave-divider svg { height: 40px; }
+    .dice-card { min-height: 160px !important; }
+    .dice-card .font-fredoka.text-7xl { font-size: 3.5rem; }
 }
 
-/* ===== Fade-in on scroll ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.7s ease;
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* ===== Wave ===== */
+.wave-divider { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; }
