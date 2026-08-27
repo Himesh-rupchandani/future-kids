@@ -1,0 +1,339 @@
+/* ============================
+   Future Kids - Custom Styles
+   ============================ */
+
+:root {
+    --primary: #4F46E5;
+    --secondary: #F59E0B;
+    --accent: #10B981;
+    --purple: #8B5CF6;
+    --pink: #EC4899;
+    --sky: #0EA5E9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ===== Gradient Buttons & Backgrounds ===== */
+.btn-gradient {
+    background: linear-gradient(135deg, #4F46E5 0%, #8B5CF6 50%, #EC4899 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #4F46E5, #8B5CF6, #EC4899);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* ===== Hero Background ===== */
+.hero-bg {
+    background: linear-gradient(135deg, #f0f4ff 0%, #fdf2f8 50%, #fff7ed 100%);
+}
+
+.stats-bg {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+}
+
+.app-bg {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 40%, #EC4899 100%);
+}
+
+/* ===== Floating Shapes ===== */
+.floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    background: #4F46E5;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 120px;
+    height: 120px;
+    background: #EC4899;
+    top: 60%;
+    left: 2%;
+    animation-delay: 2s;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    background: #F59E0B;
+    top: 30%;
+    right: 3%;
+    animation-delay: 4s;
+}
+
+.shape-4 {
+    width: 140px;
+    height: 140px;
+    background: #10B981;
+    top: 75%;
+    right: 5%;
+    animation-delay: 6s;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.shape-5 {
+    width: 60px;
+    height: 60px;
+    background: #0EA5E9;
+    top: 15%;
+    right: 15%;
+    animation-delay: 8s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-40px) rotate(270deg);
+    }
+}
+
+/* ===== Animations ===== */
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
+    50% { box-shadow: 0 0 0 15px rgba(79, 70, 229, 0); }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s infinite;
+}
+
+/* ===== Card Bounce ===== */
+.card-bounce {
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.card-bounce-delay {
+    animation: cardFloat 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ===== Nav Link Hover Underline ===== */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4F46E5, #EC4899);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== Navbar Scroll Effect ===== */
+.nav-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Program Card Hover ===== */
+.program-card {
+    position: relative;
+}
+
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4F46E5, #8B5CF6, #EC4899);
+    border-radius: 2px 2px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.program-card:hover::before {
+    opacity: 1;
+}
+
+/* ===== Partner Card Hover ===== */
+.partner-card:hover .partner-icon-bg {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== Testimonial Card Quote ===== */
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 100px;
+    color: #E0E7FF;
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.testimonial-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Scroll Reveal Animation Classes ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Input Focus States ===== */
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #4338CA, #7C3AED);
+}
+
+/* ===== Counter Animation ===== */
+.counter {
+    display: inline-block;
+}
+
+/* ===== Mobile Responsiveness Fine-tuning ===== */
+@media (max-width: 768px) {
+    .floating-shapes .shape {
+        display: none;
+    }
+    
+    .font-fredoka {
+        word-wrap: break-word;
+    }
+}
+
+/* ===== Loading animation for buttons ===== */
+.btn-gradient:active {
+    transform: scale(0.97);
+}
+
+/* ===== Tooltip-like badge animation ===== */
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.badge-pulse {
+    animation: badgePulse 2s infinite;
+}
+
+/* ===== Section title underline decorative ===== */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #F59E0B, #EC4899);
+    border-radius: 2px;
+}
+
+/* ===== Partner icon spin on hover ===== */
+.partner-card:hover i {
+    animation: iconSpin 0.5s ease;
+}
+
+@keyframes iconSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== Form success state ===== */
+.form-success {
+    background: linear-gradient(135deg, #10B981, #059669) !important;
+}
